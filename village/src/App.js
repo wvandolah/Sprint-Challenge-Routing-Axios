@@ -38,7 +38,7 @@ class App extends Component {
         <Route exact path="/"component={Header}/>
         <Route path="/smurfs" render={() => <SmurfForm updateSmurfsState={this.updateSmurfsState}/> }/> 
         <Route exact path="/smurfs" render={() => <Smurfs smurfs={this.state.smurfs} updateSmurfsState={this.updateSmurfsState}/> }/>
-        {/* <Route path="/smurfs/:id" render={(props) => <Smurfs {...props} props={this.state.smurfs}/>} /> */}
+        <Route path="/smurfs/:id" render={(props) => <Smurfs {...props} smurfs={this.state.smurfs}/>} />
       </div>
     );
   }
